@@ -1,10 +1,7 @@
 package com.kylix.submissionbfaa1
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import androidx.core.app.NavUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kylix.submissionbfaa1.databinding.ActivityDetailBinding

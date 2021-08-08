@@ -38,6 +38,8 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
         fun bind(user: User) {
 
+            //TODO 6: Aplikasikan data binding disini
+
             view.apply {
                 tvListUsername.text = user.username
                 tvListName.text = user.name

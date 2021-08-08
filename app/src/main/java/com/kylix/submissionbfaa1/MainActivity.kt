@@ -8,19 +8,22 @@ import com.kylix.submissionbfaa1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainBinding: ActivityMainBinding
+    //TODO 1: Buat view binding di Main Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mainBinding.root)
 
-        val userAdapter = UserAdapter()
-        userAdapter.setAllData(DataDummy.getAllUsers(this))
+        //TODO 2: Ubah setContentView menjadi view binding
 
-        mainBinding.rvUserList.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            adapter = userAdapter
-        }
+        setContentView(R.layout.activity_main)
+
+        val mFragmentManager = supportFragmentManager
+        val homeFragment = HomeFragment()
+
+        mFragmentManager
+            .beginTransaction()
+            .add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
+            .commit()
+
     }
 }
